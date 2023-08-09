@@ -11,7 +11,7 @@
     </parent>
     <packaging>pom</packaging>
 
-    <groupId>com.alinesno.infra.base</groupId>
+    <groupId>com.alinesno.infra.ops</groupId>
     <artifactId>alinesno-infra-ops-pipeline-parent</artifactId>
     <version>${revision}</version>
 

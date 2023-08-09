@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-    	<groupId>com.alinesno.infra.base</groupId>
+    	<groupId>com.alinesno.infra.ops</groupId>
     	<artifactId>alinesno-infra-ops-pipeline-parent</artifactId>
 		<version>${revision}</version>
 		<relativePath>../pom.xml</relativePath>
@@ -17,17 +17,17 @@
 
         <!-- 引用服务 -->
 		<dependency>
-			<groupId>com.alinesno.infra.base</groupId>
+			<groupId>com.alinesno.infra.ops</groupId>
 			<artifactId>alinesno-infra-ops-pipeline-domain</artifactId>
 			<version>${revision}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.alinesno.infra.base</groupId>
+			<groupId>com.alinesno.infra.ops</groupId>
 			<artifactId>alinesno-infra-ops-pipeline-adapter</artifactId>
 			<version>${revision}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.alinesno.infra.base</groupId>
+			<groupId>com.alinesno.infra.ops</groupId>
 			<artifactId>alinesno-infra-ops-pipeline-api</artifactId>
 			<version>${revision}</version>
 		</dependency>

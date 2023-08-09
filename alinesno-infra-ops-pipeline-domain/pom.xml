@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-    	<groupId>com.alinesno.infra.base</groupId>
+    	<groupId>com.alinesno.infra.ops</groupId>
     	<artifactId>alinesno-infra-ops-pipeline-parent</artifactId>
 		<version>${revision}</version>
 		<relativePath>../pom.xml</relativePath>
@@ -17,7 +17,7 @@
 
 		<!-- 引用公共门面服务 -->
 		<dependency>
-			<groupId>com.alinesno.infra.base</groupId>
+			<groupId>com.alinesno.infra.ops</groupId>
 			<artifactId>alinesno-infra-ops-pipeline-facade</artifactId>
 			<version>${revision}</version>
 		</dependency>
