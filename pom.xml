@@ -30,6 +30,8 @@
         <module>alinesno-infra-ops-pipeline-third</module>  <!-- third party引用 -->
         <module>alinesno-infra-ops-pipeline-boot</module>  <!-- 启动服务 -->
 
+        <module>alinesno-infra-ops-pipeline-runner</module>  <!-- 启动服务 -->
+
         <!-- 前端服务
         <module>alinesno-infra-ops-pipeline-admin</module>
         -->

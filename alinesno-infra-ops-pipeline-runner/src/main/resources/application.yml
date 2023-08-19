@@ -1,0 +1,6 @@
+server:
+  port: 17777
+
+spring:
+  application:
+    name: alinesno-infra-ops-pipeline-runner
