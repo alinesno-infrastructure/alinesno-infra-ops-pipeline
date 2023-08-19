@@ -27,7 +27,6 @@
         <module>alinesno-infra-ops-pipeline-adapter</module> <!-- 适配层 -->
         <module>alinesno-infra-ops-pipeline-api</module>  <!-- 接口服务 -->
         <module>alinesno-infra-ops-pipeline-client</module>  <!-- 对外引用 -->
-        <module>alinesno-infra-ops-pipeline-third</module>  <!-- third party引用 -->
         <module>alinesno-infra-ops-pipeline-boot</module>  <!-- 启动服务 -->
 
         <module>alinesno-infra-ops-pipeline-runner</module>  <!-- 启动服务 -->
