@@ -1,4 +1,4 @@
-package com.alinesno.infra.ops.logback.demo.controller;
+package com.alinesno.infra.ops.pipeline.demo.controller;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
