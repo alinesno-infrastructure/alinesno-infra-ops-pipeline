@@ -5,6 +5,40 @@ server:
 spring:
   application:
     name: alinesno-infra-ops-pipeline-boot
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dev_alinesno_infra_ops_scheduler_v100?serverTimezone=GMT%2B8&zeroDateTimeBehavior=CONVERT_TO_NULL
+    username: root
+    password: adminer
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      password: aip@local
   devtools:
     restart:
       enabled: true
+
+alinesno:
+  data:
+    pipeline:
+      workspacePath: ${user.home}/.infra-data-pipeline
+
+org:
+  quartz:
+    jobStore:
+      class: org.quartz.impl.jdbcjobstore.JobStoreTX
+      clusterCheckinInterval: 5000
+      driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+      isClustered: true
+      misfireThreshold: 5000
+      tablePrefix: QRTZ_
+      txIsolationLevelReadCommitted: true
+      useProperties: false
+    scheduler:
+      instanceId: AUTO
+      instanceName: ClusterQuartz
+      rmi:
+        export: false
+        proxy: false
+      wrapJobExecutionInUserTransaction: false

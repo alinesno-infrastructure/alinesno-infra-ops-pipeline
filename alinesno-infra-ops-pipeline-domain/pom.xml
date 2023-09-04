@@ -27,7 +27,13 @@
 			<artifactId>alinesno-infra-common-core</artifactId>
 			<version>${revision}</version>
 		</dependency>
+        <dependency>
+            <groupId>com.jcraft</groupId>
+            <artifactId>jsch</artifactId>
+            <version>0.1.55</version>
+            <scope>compile</scope>
+        </dependency>
 
-	</dependencies>
+    </dependencies>
 
 </project>

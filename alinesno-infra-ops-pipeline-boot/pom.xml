@@ -21,14 +21,28 @@
 			<artifactId>alinesno-infra-ops-pipeline-domain</artifactId>
 			<version>${revision}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>com.alinesno.infra.ops</groupId>
 			<artifactId>alinesno-infra-ops-pipeline-adapter</artifactId>
 			<version>${revision}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>com.alinesno.infra.ops</groupId>
 			<artifactId>alinesno-infra-ops-pipeline-api</artifactId>
+			<version>${revision}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alinesno.infra.ops</groupId>
+			<artifactId>alinesno-infra-ops-pipeline-quartz</artifactId>
+			<version>${revision}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alinesno.infra.ops</groupId>
+			<artifactId>alinesno-infra-ops-pipeline-executor</artifactId>
 			<version>${revision}</version>
 		</dependency>
 
