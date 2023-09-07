@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Bean;
  * @author luoxiaodong
  * @version 1.0.0
  */
-@MapperScan("com.alinesno.infra.ops.scheduler.mapper")
+@MapperScan("com.alinesno.infra.ops.pipeline.mapper")
 @SpringBootApplication
 public class OpsPipelineApplication {
 
