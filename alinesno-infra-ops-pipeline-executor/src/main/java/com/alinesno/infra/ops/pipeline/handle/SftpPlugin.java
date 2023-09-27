@@ -26,6 +26,8 @@ public class SftpPlugin extends AbstractExecutor {
     private static final String PROP_USERNAME = "username";
     private static final String PROP_PASSWORD = "password";
     private static final String PROP_PATH = "path";
+    private static final String PROP_UPLOAD_FILE_PATH = "upload-file-path";
+
 
     /**
      * 在此方法中实现SFTP相关任务的具体逻辑。
@@ -44,10 +46,12 @@ public class SftpPlugin extends AbstractExecutor {
         String username = (String) attrs.get(PROP_USERNAME);
         String password = (String) attrs.get(PROP_PASSWORD);
         String path = (String) attrs.get(PROP_PATH);
+        String uploadFilePath = (String) attrs.get(PROP_UPLOAD_FILE_PATH);
+
 
         findHostKey(serverId , host , username , password);
 
-        String uploadFilePath = (String) contextMap.get("uploadFilePath");
+//        String uploadFilePath = (String) contextMap.get("uploadFilePath");
 
         // 执行 SFTP 相关任务的具体逻辑
         try {
@@ -68,7 +72,7 @@ public class SftpPlugin extends AbstractExecutor {
             // 在指定路径下上传或下载文件
             // 例如，上传文件到远程服务器
             File uf = new File(uploadFilePath) ;
-            String uploadPath = path + File.separator + uf.getName() ;
+            String uploadPath = path + "/" + uf.getName() ;
 
             log.debug("upload path = {}" , uploadPath);
             sftpClient.uploadFile(uploadFilePath, uploadPath);
