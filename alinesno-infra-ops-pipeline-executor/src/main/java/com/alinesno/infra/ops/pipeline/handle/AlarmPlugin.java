@@ -1,5 +1,6 @@
 package com.alinesno.infra.ops.pipeline.handle;
 
+import com.alibaba.fastjson.JSON;
 import com.alinesno.infra.ops.pipeline.AbstractExecutor;
 import com.alinesno.infra.ops.pipeline.dto.ExecutorScriptDto;
 import com.alinesno.infra.ops.pipeline.utils.AttributeUtils;
@@ -15,6 +16,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -66,12 +68,21 @@ public class AlarmPlugin extends AbstractExecutor {
         // 可以使用 contextMap 中的数据来构造通知内容
         log.info("发送钉钉通知");
 
+        // 构造请求内容
+        Map<String, Object> payload = new HashMap<>();
+        payload.put("msgtype", "text");
+
+        Map<String, Object> text = new HashMap<>();
+        text.put("content", message);
+
+        payload.put("text", text);
+
         // 示例：使用 Apache HttpClient 发送 HTTP POST 请求
         try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
             HttpPost httpPost = new HttpPost(webhook);
 
             // 构造请求内容
-            StringEntity stringEntity = new StringEntity(message, ContentType.APPLICATION_JSON);
+            StringEntity stringEntity = new StringEntity(JSON.toJSONString(payload), ContentType.APPLICATION_JSON);
             httpPost.setEntity(stringEntity);
 
             // 发送请求并获取响应

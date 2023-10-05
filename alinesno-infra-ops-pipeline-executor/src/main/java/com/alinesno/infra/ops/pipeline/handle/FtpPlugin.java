@@ -48,7 +48,12 @@ public class FtpPlugin extends AbstractExecutor {
         FtpClientUtil ftpClient = new FtpClientUtil(host , 21 , username , password) ;
 
         File file = new File(localFile) ;
-        String remoteFileName = remotePath + File.separator + file.getName();
+        // 提高操作系统的兼容性，直接用“/”而不使用File.separator
+        String remoteFileName = remotePath + "/" + file.getName();
+
+        // TODO 若文件路径不存在则创建
+        String remoteDirectory = remoteFileName.substring(0, remoteFileName.lastIndexOf("/"));
+        ftpClient.mkdir(remoteDirectory);
 
         ftpClient.upload(remoteFileName, localFile);
 

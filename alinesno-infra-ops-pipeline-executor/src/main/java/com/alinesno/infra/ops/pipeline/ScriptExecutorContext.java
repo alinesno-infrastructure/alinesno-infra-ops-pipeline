@@ -23,9 +23,11 @@ public class ScriptExecutorContext {
         mapPlugin.put(JobTypeEnums.CLICKHOUSE.getCode(), new ClickhousePlugin());
         mapPlugin.put(JobTypeEnums.CONFIG.getCode(), new ConfigPlugin());
         mapPlugin.put(JobTypeEnums.FTP.getCode(), new FtpPlugin());
-        mapPlugin.put(JobTypeEnums.FTP.getCode(), new SftpPlugin());
+        mapPlugin.put(JobTypeEnums.SFTP.getCode(), new SftpPlugin());
         mapPlugin.put(JobTypeEnums.GROOVY.getCode(), new GroovyPlugin());
         mapPlugin.put(JobTypeEnums.MYSQL.getCode(), new MySQLPlugin());
+        mapPlugin.put(JobTypeEnums.DOWNLOAD.getCode(), new DownloadPlugin());
+        mapPlugin.put(JobTypeEnums.GIT.getCode(), new GitPlugin());
     }
 
     /**

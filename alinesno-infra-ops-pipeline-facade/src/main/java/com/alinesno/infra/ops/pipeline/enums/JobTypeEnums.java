@@ -15,7 +15,8 @@ public enum JobTypeEnums {
     FTP("ftp", "FTP任务", "执行FTP操作"),
     SFTP("sftp", "SFTP任务", "执行SFTP操作"),
     GROOVY("groovy", "Groovy任务", "执行Groovy脚本"),
-    MYSQL("mysql", "MySQL任务", "执行MySQL操作");
+    MYSQL("mysql", "MySQL任务", "执行MySQL操作"),
+    GIT("git", "Git任务", "执行Git操作");
 
     private final String code;
     private final String label;

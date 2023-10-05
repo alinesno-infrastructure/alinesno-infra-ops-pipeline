@@ -174,7 +174,7 @@ public class SftpClient {
      * @throws SftpException SFTP 异常
      */
     public void mkdir(String path) throws SftpException {
-        String[] directories = path.split("/");
+        String[] directories = path.split("/"); // TODO 使方法按绝对路径创建目录
         for (String directory : directories) {
             if (!directory.isEmpty()) {
                 try {
