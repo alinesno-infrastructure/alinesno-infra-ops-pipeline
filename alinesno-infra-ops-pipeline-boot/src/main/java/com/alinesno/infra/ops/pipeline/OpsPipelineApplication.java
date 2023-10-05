@@ -1,6 +1,7 @@
 package com.alinesno.infra.ops.pipeline;
 
 import com.alinesno.infra.common.core.context.SpringContext;
+import com.alinesno.infra.common.web.adapter.sso.enable.EnableInfraSsoApi;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,6 +12,7 @@ import org.springframework.context.annotation.Bean;
  * @author luoxiaodong
  * @version 1.0.0
  */
+@EnableInfraSsoApi
 @MapperScan("com.alinesno.infra.ops.pipeline.mapper")
 @SpringBootApplication
 public class OpsPipelineApplication {
