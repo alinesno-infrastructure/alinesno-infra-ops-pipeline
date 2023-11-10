@@ -29,7 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = "ServerKey")
 @RestController
 @Scope(SpringInstanceScope.PROTOTYPE)
-@RequestMapping("/api/infra/ops/scheduler/server-key")
+@RequestMapping("/api/infra/ops/pipeline/server-key")
 public class ServerKeyController extends BaseController<ServerKeyEntity, IServerKeyService> {
 
     // 日志记录

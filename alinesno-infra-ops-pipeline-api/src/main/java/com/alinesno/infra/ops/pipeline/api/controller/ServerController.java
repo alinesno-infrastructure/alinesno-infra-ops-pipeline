@@ -29,7 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = "Server")
 @RestController
 @Scope(SpringInstanceScope.PROTOTYPE)
-@RequestMapping("/api/infra/ops/scheduler/server")
+@RequestMapping("/api/infra/ops/pipeline/server")
 public class ServerController extends BaseController<ServerEntity, IServerService> {
 
     // 日志记录

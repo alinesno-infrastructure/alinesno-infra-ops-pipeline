@@ -7,7 +7,7 @@ spring:
     name: alinesno-infra-ops-pipeline-boot
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/dev_alinesno_infra_ops_scheduler_v100?serverTimezone=GMT%2B8&zeroDateTimeBehavior=CONVERT_TO_NULL
+    url: jdbc:mysql://localhost:3306/dev_alinesno_infra_ops_pipeline_v100?serverTimezone=GMT%2B8&zeroDateTimeBehavior=CONVERT_TO_NULL
     username: root
     password: adminer
   data:
@@ -18,6 +18,18 @@ spring:
   devtools:
     restart:
       enabled: true
+
+actable:
+  table:
+    auto: update
+  model:
+    pack: com.alinesno.infra.ops.pipeline.entity;
+  database:
+    type: mysql
+  index:
+    prefix: alinesno_ops_pipeline_idx_
+  unique:
+    prefix: alinesno_ops_pipeline_uni_
 
 alinesno:
   data:
